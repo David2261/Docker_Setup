@@ -1,24 +1,22 @@
-from typing import Literal
-import datetime
+import csv
+from typing import Lists
+
+
+GENDER = ["male", "female", None]
+
+# Функция записи в БД
+def write_file(data: Lists) -> None:
+	path_db = "pytest-functions/user_info.csv"
+
+	with open(path_db, "w") as file:
+		writer = csv.writer(file)
+		writer.writerow(
+			data
+		)
 
 
 class User:
-	username: str
+	name: str
 	surname: str
 	phone: int
 	gender: GENDER
-	created_at: datetime.datetime
-
-
-GENDER = Literal("male", "female", "none")
-
-def validate_user(user: User):
-	...
-
-
-def main():
-	user_id = 123
-	validate_user(user_id)
-
-if __name__ == '__main__':
-	main()
