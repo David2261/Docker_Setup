@@ -1,12 +1,13 @@
 from datetime import datetime
 from dataclasses import dataclass
-from typing import Iterable, Sequence, Mapping
+from typing import Iterable, Sequence, Mapping, TypeVar, Callable
 
 
 @dataclass
 class User:
 	birthday: datetime
 
+T = TypeVar("T")
 
 users = [
 	User(birthday=datetime.fromisoformat("2003-08-31")),
@@ -55,6 +56,20 @@ def main_get_user_id():
 	for u in users:
 		print(u)
 
+# Для получение iterable любого типа и его возврашала
+def first(iterable: Iterable[T]) -> T | None:
+	for element in iterable:
+		return element
 
+# print(first(["one", "two"])) # one
+# print(first((100, 200))) # 100
+# print(first([])) # None
 
+def mysum(a: int, b: int) -> int:
+	return a + b
+
+def process_operation(operation: Callable[[int, int], int], a: int, b: int) -> int:
+	return operation(a, b)
+
+print(process_operation(mysum, 1, 5))
 
