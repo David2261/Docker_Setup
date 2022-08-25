@@ -1,6 +1,5 @@
-import geocoder
+import geocoder # type: ignore
 from typing import NamedTuple
-from subprocess import Popen, PIPE
 
 from exceptions import CantGetCoordinates
 from config import *

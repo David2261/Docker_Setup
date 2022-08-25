@@ -1,7 +1,6 @@
 from datetime import datetime
 from typing import Literal, NamedTuple
 from enum import Enum
-from geopy.geocoders import Nominatim
 import json
 from json.decoder import JSONDecodeError
 import ssl
