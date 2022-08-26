@@ -12,6 +12,9 @@ class Coordinates(NamedTuple):
 # Получение координат
 def _get_geocoder_coordinates() -> Coordinates:
 	g = geocoder.ip('me')
+	if not g:
+		CantGetCoordinates()
+		exit(1)
 	data = g.latlng
 	return Coordinates(latitude=data[0], longitude=data[1])
 
