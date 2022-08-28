@@ -9,6 +9,7 @@ license = "MIT"
 python = "^3.10"
 geocoder = "^1.38.1"
 mypy = "^0.971"
+pytest-cov = "^3.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
