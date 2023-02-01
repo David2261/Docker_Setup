@@ -6,10 +6,11 @@ authors = ["David2261 <bulatnasirov2003@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 geocoder = "^1.38.1"
 mypy = "^0.971"
 pytest-cov = "^3.0.0"
+pillow = "^9.4.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
