@@ -6,4 +6,5 @@ _The project aims to explore ways to test projects in different ways._
 - Unit tests
 - Pytest
 - Django
+- Poetry
 
