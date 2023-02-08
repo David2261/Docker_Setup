@@ -25,3 +25,5 @@ def test_category_db_count(connect_category):
 	category = Category.objects.all()
 	assert 3 == category.count()
 
+
+
