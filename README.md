@@ -7,4 +7,5 @@ _The project aims to explore ways to test projects in different ways._
 - Pytest
 - Django
 - Poetry
+- C
 
