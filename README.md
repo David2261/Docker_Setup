@@ -8,4 +8,6 @@ _The project aims to explore ways to test projects in different ways._
 - Django
 - Poetry
 - C
+- CPython
+- BashScript
 
